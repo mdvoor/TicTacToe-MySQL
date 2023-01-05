@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tic-Tac-Terror</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+  </head>
+  <body>
+    <!-- ================Sign In Page================= -->
+    <div id="signInForm" class="wrapper">
+        <h1 class="signInHeader">Tic-Tac-Terror</h1>
+        <p class="introP">ENTER YOUR NAME</p>
+
+        <form>
+           <input type="text" placeholder="first name" name="firstName" class="nameInput" id="firstName">
+            <br>
+           <input type="text" placeholder="last name" name="lastName" class="nameInput" id="lastName">
+            <p class="choose">CHOOSE YOUR VILLIAN</p>
+            <div class="btnContainer">
+                <button type="submit" value="jason" id="jasonBtn" class="jasonBtn icon"></button>
+                <button type="submit" value="freddy" id="freddyBtn" class="freddyBtn icon"></button>
+            </div>
+        </form>
+    </div>
+<!-- ====================GAME PAGE=================== -->
+    <div id="gameBoard" class="wrapper hidden">
+      <h1 class="gameHeader">Welcome 
+        <span id="playerName">Villian</span>!
+      </h1>
+      <h3 class="userName">Your user name is 
+        <span class="generatedName"></span>
+      </h3>
+      
+      <p class="begin">ARE YOU READY TO BATTLE?</p>
+
+      <div id="game" class="game">
+           <img id="gameImg" src="./images/jason.jpg" alt="jason voorhees"> 
+           <p id="instructions">
+            Connect<br> three <br>of your<br>
+            villians<br> in a row <br>to win 
+            <br>the game.<br>
+            <span class="showGame">PlAY</span>
+         </p> 
+      </div>
+    </div>
+<!--=================SCORE BOARD=================== -->
+    <div id="scoreBoard" class="wrapper hidden">
+      <div class="miniBoard">
+        <div class="innerBoard">
+          <h1 class="scoreHeader">LOSER</h1>
+          <h3 class="win">VICTORIES:  <span class="winCount"></span></h3>
+          <h3 class="lose">DEFEATS: <span class="loseCount"></span></h3>
+          <h3 class="tie">SHAMEFUL TIES: <span class="tieCount"></span></h3>
+          <button class="playAgain">Play Again</button><br>
+          <form action="http://localhost:8080/hallOfFame" method="GET">
+          <button type="submit" class="hallFame">ENTER HALL OF FAME</button>
+        </form>
+        </div>
+      </div>
+    </div>
+<!--=================SCRIPTS====================== -->
+  <script type="text/javascript" src="javascript/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="javascript/userName.js"></script>
+  <script type="text/javascript" src="javascript/game.js"></script>
+  </body>
+</html>

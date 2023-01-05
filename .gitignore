@@ -1,0 +1,5 @@
+
+# custom ignore
+.prettierrc
+.prettierignore
+node_modules
